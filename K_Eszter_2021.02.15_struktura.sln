@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_Eszter_2021.02.15_struktura", "K_Eszter_2021.02.15_struktura\K_Eszter_2021.02.15_struktura.csproj", "{EFE36010-D267-4AAB-9A55-E27B3EC2B6B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFE36010-D267-4AAB-9A55-E27B3EC2B6B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE36010-D267-4AAB-9A55-E27B3EC2B6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE36010-D267-4AAB-9A55-E27B3EC2B6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE36010-D267-4AAB-9A55-E27B3EC2B6B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19962AC5-1398-4A8E-BD00-33486E4FA11F}
+	EndGlobalSection
+EndGlobal
