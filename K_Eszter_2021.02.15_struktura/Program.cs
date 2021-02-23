@@ -27,7 +27,8 @@ namespace K_Eszter_2021._02._15_struktura
         static void Main(string[] args)
         {
             //Példányosítani kell az adatstruktúrát ahhoz, hogy a Main azt kezelni tudja!!!
-            Adat[] adatok = new Adat[500];
+            //2.feladat
+            Adat[] adatok = new Adat[500];//Példányosítani kell!!!
             StreamReader olvas = new StreamReader(@"E:\OneDrive - Kisvárdai SZC Móricz Zsigmond Szakgimnáziuma és Szakközépiskolája\Oktatas\Programozas\Jakab_Acs_Eszter\Erettsegi_feladatok\2019_maj_Ultrabalaton\ub2017egyeni.txt");
             string elsosor = olvas.ReadLine();
             int n = 0;
@@ -43,6 +44,26 @@ namespace K_Eszter_2021._02._15_struktura
                 n++;
             }
             olvas.Close();
+            Console.WriteLine("2.feladat\nBeolvasás kész!");
+
+            //3.feladat
+            Console.WriteLine($"3. feladat: Egyéni indulók: {n} fő");
+
+            //4.feladat
+            int nok = 0;//Megszámlálás tétele!
+            for (int i=0;i<n;i++)
+            {
+                if (adatok[i].Kategoriak == "Noi" && adatok[i].TavSzazalek == 100)
+                {
+                    nok++;
+                }
+            }
+            Console.WriteLine($"4. feladat: Célba érkező női sportolók: {nok} fő");
+
+            //5.feladat
+
+
+            Console.ReadKey();
         }
     }
 }
