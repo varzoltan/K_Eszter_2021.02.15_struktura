@@ -61,9 +61,42 @@ namespace K_Eszter_2021._02._15_struktura
             Console.WriteLine($"4. feladat: Célba érkező női sportolók: {nok} fő");
 
             //5.feladat
+            Console.Write("5. feladat: Kérem a sportoló nevét: ");
+            string Nev = Console.ReadLine();
+            bool volt = false;
+            for (int i = 0;i<n;i++)
+            {
+                if (Nev == adatok[i].Versenyzok)
+                {
+                    volt = true;
+                    Console.WriteLine($"\tIndult egyéniben a sportoló? Igen");
+                    if (adatok[i].TavSzazalek == 100)
+                    {
+                        Console.WriteLine($"\tTeljesítette a teljes távot? Igen");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\tTeljesítette a teljes távot? Nem");
+                    }                  
+                }              
+            }
 
+            if (!volt)
+            {
+                Console.WriteLine($"\tIndult egyéniben a sportoló? Nem");
+            }
 
+            //6.feladat
+            Console.WriteLine(IdőÓrában(adatok[0].Versenyido).ToString("0.00"));
             Console.ReadKey();
+        }
+
+        //6.feladat
+        static double IdőÓrában(string versenyido)
+        {
+            string[] db = versenyido.Split(':');
+            double ora = double.Parse(db[0]) + (double.Parse(db[1]) / 60) + (double.Parse(db[2]) / 3600);
+            return ora;
         }
     }
 }
