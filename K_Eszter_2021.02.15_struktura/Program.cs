@@ -88,6 +88,53 @@ namespace K_Eszter_2021._02._15_struktura
 
             //6.feladat
             Console.WriteLine(IdőÓrában(adatok[0].Versenyido).ToString("0.00"));
+
+            //7.feladat
+            int ferfi = 0;
+            double ora = 0;
+            for (int i = 0;i<n;i++)
+            {
+                if (adatok[i].Kategoriak == "Ferfi" && adatok[i].TavSzazalek == 100)
+                {
+                    ferfi++;
+                    ora = ora + IdőÓrában(adatok[i].Versenyido);
+                }
+            }
+            double atlag = ora / ferfi;
+            Console.WriteLine($"7. feladat: Átlagos idő: {atlag} óra");
+
+            //8.feladat
+            double ferfi_min = double.MaxValue;
+            double noi_min = double.MaxValue;
+            int j=-1, k=-1;
+            for (int i = 0;i<n;i++)
+            {
+                if (adatok[i].Kategoriak == "Ferfi")
+                {
+                    if (adatok[i].TavSzazalek == 100)
+                    {
+                        if (IdőÓrában(adatok[i].Versenyido) < ferfi_min)
+                        {
+                            ferfi_min = IdőÓrában(adatok[i].Versenyido);
+                            j = i;
+                        }
+                    }
+                }
+                else
+                {
+                    if (adatok[i].TavSzazalek == 100)
+                    {
+                        if (IdőÓrában(adatok[i].Versenyido) < noi_min)
+                        {
+                            noi_min = IdőÓrában(adatok[i].Versenyido);
+                            k = i;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("8. feladat: Verseny győztesei");
+            Console.WriteLine("\tNők: "+adatok[k].Versenyzok+" ("+adatok[k].Rajtszam+".) - "+adatok[k].Versenyido);
+            Console.WriteLine("\tFérfiak: " + adatok[j].Versenyzok + " (" + adatok[j].Rajtszam + ".) - " + adatok[j].Versenyido);
             Console.ReadKey();
         }
 
